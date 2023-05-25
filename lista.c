@@ -53,8 +53,8 @@ void insertAfter(List *li, int e, Node *act){
             aux = aux->next;
         }
         new = (Node*)malloc(sizeof(Node));
+        new->next = act->next;
         act->next = new;
-        new->next = aux->next->next;
-        new->e = e;  
+        new->e = e;
     }
 }
